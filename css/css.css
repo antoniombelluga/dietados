@@ -1,0 +1,393 @@
+/****************************************************************
+ *
+ * 	menu nav fecha
+ *
+ ****************************************************************/
+nav , footer {
+    list-style: none; /* Eliminamos el puntito negro */
+    float: center;
+    } 
+nav li, footer li{
+    float: center; /* Alineamos los botones del menú */
+    margin: 0 5px; /* Distancia de separación entre botones */
+}
+input
+{
+    text-align:center;    
+    border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+}
+/****************************************************************
+ *
+ *     iconos todas las imagenes
+ *
+ ****************************************************************/
+img
+{
+		position: relative;
+		 -moz-transform-origin: 2 2;
+    border: 1px solid #d2d2d2;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.9);
+	-moz-box-shadow: 0px 3px 6px rgba(0,0,0,0.9);
+	-webkit-box-shadow: 0px 3px 6px rgba(0,0,0,0.9);
+}
+/****************************************************************
+ *
+ *     tabla de alimentos
+ *
+ ****************************************************************/
+table{
+	table-layout: fixed;			// filas iguales
+        border-collapse: collapse;		// bordes continuos, no separados
+  	border-spacing: 0px 0px;		// mantener espacio entre celdas, entre bordes, como el cellspacin
+	padding: 0px 0px 0px 0px;		// mantener espacio entre el contenido y los bordes, como el cellpading
+	empty-cells: hide;			// muestra borde y fondo de celda vacia
+	border-spacing: 0px;
+		-webkit-border-horizontal-spacing: 0px;
+		-webkit-border-vertical-spacing: 0px;
+	vertical-align:bottom;
+		position: relative;
+		 -moz-transform-origin: 2 2;
+}
+
+.obligado {
+	border-width: 1px;
+	border: solid; 
+	border-color: #FF0000;
+		position: relative;
+		 -moz-transform-origin: 2 2;
+}
+/*
+    Reducir imagenes cuando es comido
+*/
+td.comido
+{
+transform:scale(1,0.2);
+-ms-transform:scale(1,0.2); /* IE 9 */
+-webkit-transform:scale(1,0.2); /* Safari and Chrome */
+}
+img.comido
+{
+transform:translate(0%,200%);
+-ms-transform:translate(0%,200%); /* IE 9 */
+-webkit-transform:translate(0%,200%); /* Safari and Chrome */
+} 
+
+/****************************************************************
+ *
+ * modificar posicion de menus si ancho > alto
+ *
+ ****************************************************************/
+  
+      footer, nav, article {
+        border: 1px solid black;
+        padding: 0.25em;
+        margin: 0.25em;
+        border-radius: 0.25em;
+      }
+
+      html, body, .viewport {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      .vbox {
+        /* previous syntax */
+        display: -webkit-box;
+        display:    -moz-box;
+        display:         box;
+
+        -webkit-box-orient: vertical;
+           -moz-box-orient: vertical;
+            -ms-box-orient: vertical;
+                box-orient: vertical;
+
+        /* current syntax */
+        display: -webkit-flex;
+        display:    -moz-flex;
+        display:     -ms-flex;
+        display:         flex;
+
+        -webkit-flex-direction: column;
+           -moz-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+
+      /* items flex/expand horizontally */
+      .hbox {
+        /* previous syntax */
+        display: -webkit-box;
+        display:    -moz-box;
+        display:     -ms-box;
+        display:         box;
+
+        -webkit-box-orient: horizontal;
+           -moz-box-orient: horizontal;
+            -ms-box-orient: horizontal;
+                box-orient: horizontal;
+
+        /* current syntax */
+        display: -webkit-flex;
+        display:    -moz-flex;
+        display:     -ms-flex;
+        display:         flex;
+
+        -webkit-flex-direction: row;
+           -moz-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+      }
+
+      .space-between {
+        /* previous syntax */
+        -webkit-box-pack: justify;
+           -moz-box-pack: justify;
+            -ms-box-pack: justify;
+                box-pack: justify;
+
+        /* current syntax */
+        -webkit-justify-content: space-between;
+           -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+                justify-content: space-between;
+      }
+
+
+      .main {
+        /* previous syntax */
+        -webkit-box-flex: 1;
+           -moz-box-flex: 1;
+            -ms-box-flex: 1;
+                box-flex: 1;
+
+        /* current syntax */
+        -webkit-flex: 1;
+           -moz-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+      }
+
+      article {
+
+        /* previous syntax */
+        -webkit-box-flex: 6;
+           -moz-box-flex: 6;
+            -ms-box-flex: 6;
+                box-flex: 6;
+
+        /* current syntax */
+        -webkit-flex: 6;
+           -moz-flex: 6;
+            -ms-flex: 6;
+                flex: 6;
+      }
+
+      footer, nav {
+        /* previous syntax */
+        -webkit-box-flex: 1;
+           -moz-box-flex: 1;
+            -ms-box-flex: 1;
+                box-flex: 1;
+
+        /* current syntax */
+        -webkit-flex: 1;
+           -moz-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+	}
+
+       /* Si el alto es mayor que el ancho 
+	* cambio posicion menu general */
+  @media all and (orientation : portrait)  {
+  
+	  .main, #page {
+		-webkit-flex-flow: column wrap;
+  		-moz-flex-flow: column wrap;
+  		-ms-flex-flow: column wrap;
+  		flex-flow: column wrap;
+ 		-webkit-box-orient: block-axis;
+		flex-direction: column;		// para firefox
+    		flex-wrap: wrap;
+   	}
+    }
+    
+         /* Si el alto es mayor que el ancho
+	  * cambio posicion de elementos del nav y el pie */
+  @media all and (orientation : landscape)  {
+  
+	  .submain, #page {
+		-webkit-flex-flow: column wrap;
+  		-moz-flex-flow: column wrap;
+  		-ms-flex-flow: column wrap;
+  		flex-flow: column wrap;
+ 		-webkit-box-orient: block-axis;
+		flex-direction: column;		// para firefox
+    		flex-wrap: wrap;
+    }   
+  }
+  /*
+   * fin de cambio de orientacion
+   */
+/****************************************************************
+ *
+ *	SEGUN RESOLUCIONES DE PANTALLA
+ *
+ ****************************************************************/
+/* por defecto las mini-guini */
+   img{
+	width: 12px;
+	height: 12px;
+    }
+   input{
+	    font-size: 8px;
+	        width: 12px;
+	}
+  /*
+  /*  VERTICALES
+  /*
+  /* 160 - 239 vertical */
+  @media (orientation : portrait) and (min-width:180px){
+    img{
+	width: 15px;
+	height: 15px;
+    }
+    input{
+	    font-size: 10px;
+	        width: 15px;
+   }
+  }
+  /* 150 - 319 vertical */
+  @media (orientation : portrait) and (min-width:240px){
+    img{
+	width:25px;
+	height:25px;
+    }
+    input{
+	    font-size: 15px;
+	        width:25px;
+   }
+  }
+  /* 315 - 479 vertical */
+  @media (orientation : portrait) and (min-width:320px){
+    img{
+      width: 40px;
+	    height: 40px;
+    }
+    input{
+	    font-size: 25px;
+	        width: 40px;
+    }
+  }
+    /* 400 - 639 vertical */
+  @media (orientation : portrait) and (min-width:480px){
+    img{
+	width: 60px;
+	height: 60px;
+    }
+    input{
+	    font-size: 40px;
+	        width: 60px;
+   }
+  }
+    /* 640 - 959 vertical */
+  @media (orientation : portrait) and (min-width:640px){
+    img{
+	width: 80px;
+	height: 80px;
+    }
+    input{
+	    font-size: 60px;
+	        width: 80px;
+   }
+  }
+    /* 800 - (more) vertical */
+  @media (orientation : portrait) and (min-width:960px){
+    img{
+	width: 115px;
+	height: 115px;
+    }
+    input{
+	    font-size: 80px;
+	        width: 115px;
+   }
+  }
+  /*
+  /*  HORIZONTALES
+  /*
+  /* 150 - 319 horizontal */
+  @media (orientation : landscape) and (min-width:240px){
+    img{
+	width: 15px;
+	height: 15px;
+    }
+    input{
+	    font-size: 10px;
+	       width: 15px;
+    }
+   }
+  /* 315 - 479 horizontal */
+  @media (orientation : landscape) and (min-width:320px){
+    img{
+	width: 25px;
+	height: 25px;
+    }
+    input{
+	    font-size: 15px;
+	       width: 25px;
+    }
+   }
+  /* 400 - 639 horizontal */
+  @media (orientation : landscape) and (min-width:480px){
+    img{
+	width: 40px;
+	height: 40px;
+    }
+    input{
+	    font-size: 25px;
+	       width: 40px;
+    }
+   }
+  /* 640 - 959 horizontal */
+  @media (orientation : landscape) and (min-width:640px){
+    img{
+	width: 48px;
+	height: 48px;
+    }
+    input{
+	    font-size: 35px;
+	       width: 48px;
+    }
+   }
+  /* 800 - 1439 horizontal */
+  @media (orientation : landscape) and (min-width:960px){
+    img{
+	width: 80px;
+	height: 80px;
+    }
+    input{
+	    font-size: 60px;
+	       width: 80px;
+    }
+   }
+  /* 1150 - (more) horizontal */
+  @media (orientation : landscape) and (min-width:1440px){
+    img{
+	width: 115px;
+	height: 115px;
+    }
+    input{
+	    font-size: 80px;
+	       width: 115px;
+    }
+   }
+
