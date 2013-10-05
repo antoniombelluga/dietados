@@ -1,9 +1,9 @@
 {
     "name": "dietados",
     "description": "dieta hipocalorica",
-    "launch_path": "/",
+    "launch_path": "/index.html",
     "icons": {
-        "128": "/images/logo128.png"
+        "60": "/images/logo60.png"
     },
     "developer": {
         "name": "Antonio Moreno Belluga",
