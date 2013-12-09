@@ -1,7 +1,7 @@
 {
     "name": "dietados",
     "description": "dieta hipocalorica",
-    "launch_path": "/dietados/index.html",
+    "launch_path": "/",
     "version": "1.3",
     "name": "dietados",
     "launch_path": "index.html",
