@@ -1,7 +1,14 @@
 {
+<<<<<<< HEAD
     "name": "dietados",
     "description": "dieta hipocalorica",
     "launch_path": "/index.html",
+=======
+    "version": "1.3",
+    "name": "dietados",
+    "launch_path": "index.html",
+    "description": "dieta mediterranea",
+>>>>>>> master
     "icons": {
         "60": "/images/logo60.png",
         "90": "images/logo90.png",
