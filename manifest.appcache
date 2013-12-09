@@ -1,6 +1,7 @@
 CACHE MANIFEST
-#Version 0.6800004
-/dietados/js/diet.js
-/dietados/images/*
-/dietados/index.html
-/dietados/css/css.css
+# Version 0.6800004
+
+/js/diet.js
+/images/*
+/index.html
+/css/css.css
