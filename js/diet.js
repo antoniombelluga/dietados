@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////
 function onInit(){
     //
-    // cuando inicio primera vez, creo todos, un a�o
+    // cuando inicio primera vez, creo todos, un año
     // no hace falta, como tenemos la dieta, se crea dia a dia, si el dia no esta creado se crea
     // 20130619 = 214365
     // 2 lacteos, 1 grasas, 4 hidratos, 3 proteinas, 6 verduras, 5 frutas
@@ -277,40 +277,95 @@ function crear_pie(){
 	  	document.getElementById("menu_pie").appendChild(li);
 }
 //
+// escribo una fila de 6 columnas
+//
+function add_6row6col(){
+  for (var i = 0; i < 6; i++) {
+    var tr = document.createElement("tr");
+        tr.setAttribute("id", "row" + i);
+        document.getElementById('tabla').appendChild(tr);
+    
+        for (var j = 0; j < 6; j++) {
+          var td = document.createElement("td");
+                td.setAttribute("id", "row" + i + "col" + j);
+                document.getElementById("row" + i).appendChild(td);
+        }
+  }
+}
+//
+// escribo las oes
+//
+function add_oes(){
+  var p = document.createElement("p");
+  p.setAttribute("id", "p0");
+  p.setAttribute("align", "center");
+  document.getElementById("row0col2").appendChild(p);
+  var str=document.createTextNode('or');
+  document.getElementById("p0").appendChild(str);
+  var p = document.createElement("p");
+  p.setAttribute("id", "p1");
+  p.setAttribute("align", "center");
+  document.getElementById("row1col2").appendChild(p);
+  var str=document.createTextNode('o');
+  document.getElementById("p1").appendChild(str);
+  var p = document.createElement("p");
+  p.setAttribute("id", "p2");
+  p.setAttribute("align", "center");
+  document.getElementById("row2col2").appendChild(p);
+  var str=document.createTextNode('|');
+  document.getElementById("p2").appendChild(str);
+  var p = document.createElement("p");
+  p.setAttribute("id", "p3");
+  p.setAttribute("align", "center");
+  document.getElementById("row3col2").appendChild(p);
+  var str=document.createTextNode('或');
+  document.getElementById("p3").appendChild(str);
+  var p = document.createElement("p");
+  p.setAttribute("id", "p4");
+  p.setAttribute("align", "center");
+  document.getElementById("row4col2").appendChild(p);
+  var str=document.createTextNode('または');
+  document.getElementById("p4").appendChild(str);
+  var p = document.createElement("p");
+  p.setAttribute("id", "p5");
+  p.setAttribute("align", "center");
+  document.getElementById("row5col2").appendChild(p);
+  var str=document.createTextNode('или');
+  document.getElementById("p5").appendChild(str);
+
+}
+//
 // escribo seleccion  mujer o hombre
 //
 function woman_man(){
-	var tr = document.createElement("tr");
-        tr.setAttribute("id", "row_woman_man");
-        document.getElementById('tabla').appendChild(tr);
- 	//
-	// escribo primera columna
+  add_6row6col();
+  add_oes();
+  
+  var img = document.createElement("img");
+  img.setAttribute("id", "mano_apunta_der");
+  img.setAttribute("src", "images/mano_apunta_der.svg");
+  document.getElementById("row2col0").appendChild(img);
 	//
-	var td = document.createElement("td");
-	td.setAttribute("id", "col_woman");
-  	document.getElementById("row_woman_man").appendChild(td);
-  	//
 	// inserto imagen mujer
 	//
 	var img = document.createElement("img");
 	img.setAttribute("id", "woman");
 	img.setAttribute("src", "images/woman.gif");
-  	img.setAttribute("onclick", "crea_dieta(this)");
-	document.getElementById("col_woman").appendChild(img);
- 	//
-	// escribo segunda columna
-	//
-	var td = document.createElement("td");
-	td.setAttribute("id", "col_man");
-  	document.getElementById("row_woman_man").appendChild(td);
-  	//
+  img.setAttribute("onclick", "crea_dieta(this)");
+	document.getElementById("row2col1").appendChild(img);
+  //
 	// inserto imagen hombre
 	//
 	var img = document.createElement("img");
 	img.setAttribute("id", "man");
 	img.setAttribute("src", "images/man.gif");
-  	img.setAttribute("onclick", "crea_dieta(this)");
-	document.getElementById("col_man").appendChild(img);
+ 	img.setAttribute("onclick", "crea_dieta(this)");
+	document.getElementById("row2col3").appendChild(img);
+  
+  var img = document.createElement("img");
+  img.setAttribute("id", "mano_apunta_izq");
+  img.setAttribute("src", "images/mano_apunta_izq.svg");
+  document.getElementById("row2col4").appendChild(img);
 }
 //
 // escribo date select picker como input tipo date pero lo dejo oculto, solo leer
